@@ -7,7 +7,7 @@ import random
 # 사용자로부터 온도 입력 받기
 temperature = st.number_input("현재 기온을 입력하세요", min_value=-10.0, max_value=40.0, step=1.0)
 
-st.header("Streamlit 옷 추천")
+st.header("온도에 따른 옷 추천")
 
 # 현재 기온에 따라 이미지 선택
 if st.button("추천"):
