@@ -4,10 +4,28 @@ import io
 import os
 import random
 
-# 사용자로부터 온도 입력 받기
-temperature = st.number_input("현재 기온을 입력하세요", min_value=-10.0, max_value=40.0, step=1.0)
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://i.imgur.com/zRtWHdz.jpg");
+             background-attachment: fixed;
+             background-size: cover
+             
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-st.header("온도에 따른 옷 추천")
+add_bg_from_url()
+
+st.header("𝑻𝒆𝒎𝒑𝒆𝒓𝒂𝒕𝒆 𝑻𝒓𝒆𝒏𝒅𝒔")
+subheader = st.text("𝙋𝙡𝙚𝙖𝙨𝙚 𝙚𝙣𝙩𝙚𝙧 𝙩𝙝𝙚 𝙘𝙪𝙧𝙧𝙚𝙣𝙩 𝙩𝙚𝙢𝙥𝙚𝙧𝙖𝙩𝙪𝙧𝙚")
+
+# 사용자로부터 온도 입력 받기
+temperature = st.number_input("𝘛𝘦𝘮𝘱𝘦𝘳𝘢𝘵𝘶𝘳𝘦", min_value=-10, max_value=40, step=1)
 
 # 현재 기온에 따라 이미지 선택
 if st.button("추천"):
@@ -31,4 +49,3 @@ if st.button("추천"):
 
     # Streamlit 앱에 이미지 표시
     st.image(image, caption=f"현재 기온: {temperature}도 (추천)", use_column_width=True)
-    

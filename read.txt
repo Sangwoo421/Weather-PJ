@@ -2,6 +2,4 @@
 
 pip install -r requirements.txt  패키지를 한 번에 설치
 
-.\venv\Scripts\activate      가상환경설정
-
 streamlit run Weather.py     실행
