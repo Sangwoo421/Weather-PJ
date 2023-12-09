@@ -28,7 +28,7 @@ subheader = st.text("𝙋𝙡𝙚𝙖𝙨𝙚 𝙚𝙣𝙩𝙚𝙧 𝙩𝙝𝙚 
 temperature = st.number_input("𝘛𝘦𝘮𝘱𝘦𝘳𝘢𝘵𝘶𝘳𝘦", min_value=-10, max_value=40, step=1)
 
 # 현재 기온에 따라 이미지 선택
-if st.button("RECOMMENDED"):
+if st.button("RECOMMEND"):
     if temperature <= 5:
         image_directory = os.path.join(os.path.dirname(__file__), "5")
     elif 6 <= temperature <= 15:
